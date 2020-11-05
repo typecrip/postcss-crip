@@ -84,6 +84,8 @@ body{
 
 _(default: `{}`)_
 
+### Custom property specification
+
 You can create your own crip properties. Not all CSS properties are available in the module. So feel free to add your own.
 
 ```js
@@ -95,6 +97,7 @@ var output = postcss(crip(options))
   .process(css)
   .css;
 ```
+
 
 **input.css**
 
@@ -109,6 +112,41 @@ td {
 ```css
 td { 
   azimuth: far-right 
+}
+```
+
+### Automated color crippification
+You can also set `adjustColors` to automatically correct color values to be crip-compliant
+
+```js
+var options = {
+  'adjustColors': true
+}
+
+var output = postcss(crip(options))
+  .process(css)
+  .css;
+```
+
+**input.css**
+
+```css
+body { 
+  background-color: #FF0000;
+  color: red;
+  border-color: rgb(80, 0, 0);
+  outline-color: hsl(10, 100%, 60%);
+}
+```
+
+**output.css**
+
+```css
+body {
+  background-color: #000000;
+  color: blue;
+  border-color: rgb(0, 0, 0);
+  outline-color: hsl(20, 100%, 60%);
 }
 ```
 
