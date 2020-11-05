@@ -1,6 +1,6 @@
 # PostCSS Crip [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin Shorthand properties for Crips that are too lazy to write.
+[PostCSS] plugin Shorthand properties for hard-working Crips that have better shit to do than write lil bitch ass property names all day.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/johnie/postcss-crip.svg
